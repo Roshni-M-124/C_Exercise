@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int main()
+int main(void)
 {
     printf("Minimum Signed Char %d\n",-(char)((unsigned char) ~0 >> 1) - 1);
     printf("Maximum Signed Char %d\n",(char) ((unsigned char) ~0 >> 1));
