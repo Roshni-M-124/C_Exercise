@@ -1,6 +1,6 @@
 #include<stdio.h>
 int bitcount(unsigned x);
-int main(void)
+int main()
 {
     printf("%d",bitcount((unsigned)12));
 }
