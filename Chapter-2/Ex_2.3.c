@@ -7,7 +7,7 @@
 int mgetline(char line[],int maxline);
 int htoi(char s[]);
 
-int main(void)
+int main()
 {
     char line[MAXLINE];
     int value;
