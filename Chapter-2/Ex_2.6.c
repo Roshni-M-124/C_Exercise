@@ -1,6 +1,6 @@
 #include<stdio.h>
 unsigned setbits(unsigned x,int p,int n,unsigned y);
-int main(void)
+int main()
 {
     printf("%u",setbits((unsigned)12,3,2,(unsigned)57));
 }
