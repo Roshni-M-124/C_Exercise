@@ -1,6 +1,6 @@
 #include<stdio.h>
 unsigned rightrot(unsigned x,int n);
-int main(void)
+int main()
 {
     printf("%u",(unsigned)rightrot((unsigned)8,(int)1));
     return 0;
