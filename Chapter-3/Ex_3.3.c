@@ -36,9 +36,9 @@ void expand(char s1[], char s2[])
         if (c == '-' && prev != '\0' && s1[i+1] != '\0') {
             char next = s1[i+1];
 
-        if ( (islower(prev) && islower(next) && prev < next) ||(isupper(prev) && isupper(next) && prev <next)||                 (isdigit(prev) && isdigit(next) && prev < next) ) {
-
-        for (int k = prev + 1; k <= next; k++)
+        if ( (islower(prev) && islower(next) && prev < next) ||(isupper(prev) && isupper(next) && prev <next)||(isdigit(prev) && isdigit(next) && prev < next) ) 
+        {
+                for (int k = prev + 1; k <= next; k++)
                     s2[j++] = k;
 
                 prev = '\0';
