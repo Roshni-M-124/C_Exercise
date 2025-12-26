@@ -12,8 +12,15 @@
 
 int getop(char []);
 void ungets(char []);
+int getch();
+void ungetch(int);
 void push(double);
 double pop();
+
+int sp = 0; 
+double val[MAXVAL];    
+char buf[BUFSIZE];  
+int bufp = 0; 
 
 int main(int argc,char *argv[])
 {
@@ -56,8 +63,6 @@ int main(int argc,char *argv[])
     return 0;
 }
 
-int getch(void);
-void ungetch(int);
 int getop(char s[])
 {
     int i,c;
@@ -78,10 +83,7 @@ int getop(char s[])
         ungetch(c);
     return NUMBER;
 }
-
-char buf[BUFSIZE];  
-int bufp = 0;     
-
+  
 int getch(void) 
 {
     return (bufp > 0)? buf[--bufp]: getchar();
@@ -95,9 +97,6 @@ void ungetch(int c)
         buf[bufp++] = c;
 }
 
-int sp = 0; 
-double val[MAXVAL];    
-
 void push(double f)
 {
     if(sp < MAXVAL)
@@ -106,7 +105,7 @@ void push(double f)
         printf("error: stack full, can't push %g \n",f);
 }
 
-double pop(void)
+double pop()
 {
     if ( sp > 0)
         return val[--sp];
